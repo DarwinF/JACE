@@ -1,0 +1,4 @@
+JACE
+obj/*
+*.xcodeproj
+._*
