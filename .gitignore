@@ -2,3 +2,6 @@ JACE
 obj/*
 *.xcodeproj
 ._*
+*.vcxproj
+*.filters
+*.user
