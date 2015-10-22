@@ -1,2 +1,0 @@
-clang++ -c *.cpp
-clang++ -L/usr/local/lib -lSDL2 *.o -o NAME
