@@ -1,7 +1,5 @@
 #include "Window.h"
 
-#include <string.h>
-
 // Constructor
 Window::Window() {
     mainWindow = NULL;

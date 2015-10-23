@@ -1,20 +1,4 @@
-#include "../JACE_Common.h"
 #include "GraphicsEngine.h"
-#include "Window.h"
-
-#ifdef __linux__
-	#include <GL/freeglut.h>
-	#include <GL/gl.h>
-	#include <GL/glu.h>
-#elif __APPLE__
-	#include <OpenGL/OpenGL.h>
-	#include <OpenGL/gl.h>
-	#include <OpenGL/glu.h>
-#endif
-
-#include <Windows.h>
-#include <gl/GL.h>
-#include <gl/GLU.h>
 
 // Null constructor that sets our 
 GraphicsEngine::GraphicsEngine() {

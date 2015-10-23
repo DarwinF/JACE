@@ -8,7 +8,7 @@ int main(int argc, char **argv) {
 	do {
 		game->Update();
 		game->Draw();
-	}while(game->isRunning());
+	}while(game->IsRunning());
     
 	return 0;
 }

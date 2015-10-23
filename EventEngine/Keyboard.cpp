@@ -8,24 +8,24 @@ Keyboard::~Keyboard() {
     
 }
 
-jBoolean Keyboard::IsKeyDown(Key key) {
-    jBoolean isDown = FALSE;
+Boolean Keyboard::IsKeyDown(Key key) {
+    Boolean isDown = False;
 
     SDL_PumpEvents();
     
     if (keyState[key])
-        isDown = TRUE;
+        isDown = False;
     
     return isDown;
 }
 
-jBoolean Keyboard::IsKeyUp(Key key) {
-    jBoolean isUp = FALSE;
+Boolean Keyboard::IsKeyUp(Key key) {
+    Boolean isUp = False;
 
     SDL_PumpEvents();
     
     if (!keyState[key])
-        isUp = TRUE;
+        isUp = True;
     
     return isUp;
 }

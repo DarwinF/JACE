@@ -1,14 +1,9 @@
-#include "Texture2D.h"
+#include "../JACE_Common.h"
 
+#include "Texture2D.h"
 #include "Textures/PNGTex.h"
 
-#ifdef __linux__
-	#include <GL/freeglut.h>
-#elif __APPLE__
-	#include <OpenGL/gl.h>
-#endif
-
-Texture2D::Texture2D(string fileLoc) {
+Texture2D::Texture2D(char *fileLoc) {
     fileLocation = fileLoc;
     
     textureID = 0;

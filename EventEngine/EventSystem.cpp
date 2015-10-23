@@ -1,5 +1,4 @@
 #include "EventSystem.h"
-#include <SDL.h>
 
 EventSystem::EventSystem() {
     
@@ -9,14 +8,14 @@ EventSystem::~EventSystem() {
     
 }
 
-jBoolean EventSystem::PollQuit() {
-    jBoolean quit = FALSE;
+Boolean EventSystem::PollQuit() {
+    Boolean quit = False;
     
     SDL_Event sevent;
     SDL_PollEvent(&sevent);
     
     if (sevent.type == SDL_QUIT)
-        quit = TRUE;
+        quit = True;
     
     return quit;
 }

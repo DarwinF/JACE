@@ -1,18 +1,4 @@
 #include "Renderer.h"
-#include "Window.h"
-
-#include <stdio.h>
-#include <SDL_opengl.h>
-
-#ifdef __linux__
-	#include <GL/freeglut.h>
-#elif __APPLE__
-	#include <OpenGL/gl.h>
-#endif
-
-#include <Windows.h>
-#include <gl/GL.h>
-#include <gl/GLU.h>
 
 Renderer::Renderer(Window *win) {
     window = win;

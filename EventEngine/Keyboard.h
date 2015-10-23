@@ -2,7 +2,7 @@
 #define __JACE_KEYBOARD_H_
 
 #include "../JACE_Common.h"
-#include <SDL.h>
+#include "../JACE_Graphics.h"
 
 /* List of Keyboard Keys */
 enum Key {
@@ -103,8 +103,8 @@ public:
     Keyboard();
     ~Keyboard();
     
-    jBoolean IsKeyDown(Key);
-    jBoolean IsKeyUp(Key);
+    Boolean IsKeyDown(Key);
+    Boolean IsKeyUp(Key);
 private:
     const Uint8 *keyState;
 };

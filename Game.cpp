@@ -1,28 +1,15 @@
 #include "Game.h"
-#include <stdio.h>
-
-#ifdef __linux__
-	#include <GL/freeglut.h>
-	#include <GL/gl.h>
-#elif __APPLE__
-	#include <OpenGL/OpenGL.h>
-	#include <OpenGL/gl.h>
-#endif
-
-#include <Windows.h>
-#include <gl/GL.h>
-#include <gl/GLU.h>
 
 int xPos, yPos;
 int frameNumber;
 int lastUpdate = 0;
-_Bool pRunning = FALSE;
+Boolean pRunning = False;
 
 Game::Game() {
 	graphicsEngine = new GraphicsEngine();
     renderer = graphicsEngine->Initialize();
 
-	running = TRUE;
+	running = True;
 
 	// Initialize Game Code Here
     keyboard = new Keyboard();
@@ -44,21 +31,21 @@ void Game::LoadContent() {
 void Game::Update() {
 	// Put Update Code Here
     if (keyboard->IsKeyDown(ESCAPE) || eventSystem->PollQuit()) {
-        running = FALSE;
+        running = False;
     }
     
     if (keyboard->IsKeyDown(A)) {
         xPos -= 5;
-        pRunning = TRUE;
+        pRunning = True;
         lastUpdate++;
     }
     else if (keyboard->IsKeyDown(D)) {
-        pRunning = TRUE;
+        pRunning = True;
         xPos += 5;
         lastUpdate++;
     }
     else {
-        pRunning = FALSE;
+        pRunning = False;
         frameNumber = 0;
         lastUpdate = 0;
     }

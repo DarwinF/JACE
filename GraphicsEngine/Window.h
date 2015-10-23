@@ -3,8 +3,8 @@
 
 // RenderEngine Include
 #include "../JACE_Common.h"
+#include "../JACE_Graphics.h"
 #include "Rectangle.h"
-#include <SDL.h>
 
 // Constants
 #define DEFAULT_POS_X			SDL_WINDOWPOS_CENTERED
@@ -28,10 +28,7 @@
 class Window
 {
 public:
-	// Constructors
 	Window();
-
-	// Destructor
 	~Window();
 
 	// Setters

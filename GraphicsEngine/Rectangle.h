@@ -1,7 +1,6 @@
 #ifndef __JACE_RECTANGLE_H_
 #define __JACE_RECTANGLE_H_
 
-#include <stdlib.h>
 #include "../JACE_Common.h"
 
 class Rectangle
@@ -28,7 +27,7 @@ private:
 	int width;
 	int height;
 
-	jBoolean undefined;
+	Boolean undefined;
 };
 
 #endif

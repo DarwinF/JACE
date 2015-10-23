@@ -1,15 +1,14 @@
 #ifndef __JACE_GAME_H_
 #define __JACE_GAME_H_
 
+#include "JACE_Common.h"
+
 #include "GraphicsEngine/GraphicsEngine.h"
 #include "GraphicsEngine/Renderer.h"
 #include "EventEngine/Keyboard.h"
 #include "EventEngine/EventSystem.h"
 
-#include "JACE_Common.h"
-
-class Game
-{
+class Game {
 public:
 	Game();
 	~Game();
@@ -18,7 +17,7 @@ public:
 	void Update();
 	void Draw();
 
-	_Bool isRunning() { return running; };
+	Boolean IsRunning() { return running; };
 private:
 	GraphicsEngine *graphicsEngine;
     Renderer *renderer;
@@ -26,7 +25,7 @@ private:
     Keyboard *keyboard;
     EventSystem *eventSystem;
     
-	_Bool running;
+	Boolean running;
 };
 
 #endif

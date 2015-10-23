@@ -2,6 +2,8 @@
 #define __JACE_RENDERER_H_
 
 #include "../JACE_Common.h"
+#include "../JACE_Graphics.h"
+#include "Window.h"
 
 class Window;
 const static int COLOR_SIZE = 4;

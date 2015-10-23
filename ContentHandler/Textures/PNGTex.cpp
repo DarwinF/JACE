@@ -1,10 +1,7 @@
 #include "PNGTex.h"
-
-#include <stdlib.h>
-#include <math.h>
 #include <png.h>
 
-PNGTex::PNGTex(string filePath) {
+PNGTex::PNGTex(char *filePath) {
     ID = 0;
     
     fileLocation = filePath;

@@ -2,8 +2,9 @@
 #define __JACE_GRAPHICS_ENGINE_H_
 
 // GraphicsEngine Includes
-#include <SDL.h>
 #include "../JACE_Common.h"
+#include "../JACE_Graphics.h"
+#include "Window.h"
 #include "Renderer.h"
 
 // Constants

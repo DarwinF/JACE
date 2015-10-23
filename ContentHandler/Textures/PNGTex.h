@@ -2,19 +2,11 @@
 #define __JACE_PNG_TEX_H_
 
 #include "../../JACE_Common.h"
-
-#include <stdio.h>
-#ifdef __linux__
-	#include <GL/freeglut.h>
-	#include <GL/gl.h>
-#elif __APPLE__
-	#include <OpenGL/OpenGL.h>
-	#include <OpenGl/gl.h>
-#endif
+#include "../../JACE_Graphics.h"
 
 class PNGTex {
 public:
-    PNGTex(string);
+	PNGTex(char *);
     ~PNGTex();
     
     GLuint getID() { return ID; }
@@ -22,7 +14,7 @@ public:
     GLuint getHeight() { return height; }
 private:
     FILE *image;
-    string fileLocation;
+	char *fileLocation;
     
     GLuint ID;
     GLuint width;

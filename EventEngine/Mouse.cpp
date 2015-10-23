@@ -1,18 +1,18 @@
 #include "Mouse.h"
 
 Mouse::Mouse() {
-    isVisible = TRUE;
+    isVisible = True;
     
 }
 Mouse::~Mouse() {
     
 }
 
-jBoolean Mouse::GetMouseButtonPressed(int button) {
-    jBoolean pressed = FALSE;
+Boolean Mouse::GetMouseButtonPressed(int button) {
+    Boolean pressed = False;
     
     if (SDL_GetMouseState(NULL, NULL)&SDL_BUTTON(button))
-        pressed = TRUE;
+        pressed = True;
     
     return pressed;
 }

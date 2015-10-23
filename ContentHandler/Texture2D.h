@@ -1,18 +1,13 @@
 #ifndef __JACE_Texture2D_H_
 #define __JACE_Texture2D_H_
 
-#ifdef __linux__
-	#include <GL/freeglut.h>
-#elif __APPLE__
-	#include <OpenGL/OpenGL.h>
-#endif
-
 #include "../JACE_Common.h"
+#include "../JACE_Graphics.h"
 #include "../GraphicsEngine/Rectangle.h"
 
 class Texture2D {
 public:
-    Texture2D(string);
+    Texture2D(char *fileLocation);
     ~Texture2D();
     
     void Load();
@@ -26,7 +21,7 @@ public:
 private:
     const int FILE_EXTENSION_LEN = 4;
     
-    string fileLocation;
+    char *fileLocation;
     
     GLuint textureID;
     GLuint textureWidth;

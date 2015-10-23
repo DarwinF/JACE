@@ -1,8 +1,8 @@
 #ifndef __JACE_MOUSE_H_
 #define __JACE_MOUSE_H_
 
-#include <SDL.h>
 #include "../JACE_Common.h"
+#include "../JACE_Graphics.h"
 
 #define LEFT_BUTTON     1
 #define MIDDLE_BUTTON   2
@@ -14,15 +14,15 @@ public:
     ~Mouse();
     
     // Getters
-    jBoolean GetVisibility() { return isVisible; };
-    jBoolean GetMouseButtonPressed(int button);
+    Boolean GetVisibility() { return isVisible; };
+    Boolean GetMouseButtonPressed(int button);
     int GetMouseXLocation();
     int GetMouseYLocation();
     
     // Setters
-    void SetVisibility(jBoolean visible) { isVisible = visible; };
+    void SetVisibility(Boolean visible) { isVisible = visible; };
 private:
-    jBoolean isVisible;
+    Boolean isVisible;
 };
 
 #endif
